@@ -4,149 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Order Form | Cekelet Teh</title>
 
-    <link rel="stylesheet" href="chocshopstyle.css">
+    <title>Customer Details | Cekelet Teh</title>
 
     <style>
-        body {
-            background-color: #FDE5CB;
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            color: #2A1105;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        #order-form {
-            max-width: 550px;
-            margin: 60px auto;
-            padding: 40px;
-            background-color: #E8C9AD;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2A1105;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .checkout-wrapper {
+            display: flex;
+            width: 900px;
+            max-width: 100%;
+            min-height: 550px;
+            background-color: #FFF4E8;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(42, 17, 5, 0.15);
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.3);
         }
 
-        #order-form h2 {
-            text-align: center;
+        /* LEFT SIDE */
+
+        .checkout-left {
+            width: 40%;
+            background-color: #A65E32;
+            padding: 50px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #FFF4E8;
+        }
+
+        .checkout-left h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .checkout-left p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #FFF0DF;
+        }
+
+        .chocolate-line {
+            width: 65px;
+            height: 4px;
+            background-color: #E8B86D;
+            margin: 25px 0;
+        }
+
+        .checkout-left h3 {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            color: #FFE1B8;
+        }
+        .checkout-right {
+            width: 60%;
+            padding: 50px 45px;
+        }
+
+        .checkout-right h2 {
             color: #2A1105;
-            font-size: 28px;
+            font-family: Georgia, serif;
+            font-size: 27px;
             margin-bottom: 10px;
         }
 
-        #order-form p {
-            text-align: center;
-            color: #693512;
+        .subtitle {
+            color: #79533C;
+            font-size: 14px;
             margin-bottom: 30px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .form-group label {
             display: block;
-            color: #2A1105;
+            font-size: 14px;
             font-weight: bold;
-            margin-bottom: 8px;
+            color: #4A2415;
+            margin-bottom: 9px;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px;
-            box-sizing: border-box;
-            border: 1px solid #A65E32;
+            padding: 13px 15px;
+            border: 1px solid #D8B49A;
             border-radius: 8px;
-            background-color: #FFF9F2;
-            color: #2A1105;
+            background-color: #FFFFFF;
             font-size: 14px;
+            color: #2A1105;
+            outline: none;
+            font-family: Arial, sans-serif;
         }
 
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #8A7466;
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border: 1px solid #A65E32;
+            box-shadow: 0 0 5px rgba(166, 94, 50, 0.2);
         }
 
         .form-group textarea {
             height: 100px;
-            resize: vertical;
+            resize: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #A89586;
         }
 
         .proceed-button {
             width: 100%;
-            padding: 14px;
-            background-color: #A65E32;
-            color: #FFFFFF;
+            padding: 15px;
             border: none;
-            border-radius: 25px;
-            font-size: 16px;
+            border-radius: 8px;
+            background-color: #2A1105;
+            color: #FFFFFF;
+            font-size: 15px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
+            margin-top: 5px;
         }
 
         .proceed-button:hover {
-            background-color: #2A1105;
+            background-color: #A65E32;
+            transform: translateY(-2px);
         }
 
         .back-link {
             display: block;
             text-align: center;
             margin-top: 20px;
-            color: #693512;
+            color: #79533C;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 13px;
         }
 
         .back-link:hover {
             color: #A65E32;
+        }
+
+        @media (max-width: 650px) {
+            .checkout-wrapper {
+                flex-direction: column;
+            }
+
+            .checkout-left,
+            .checkout-right {
+                width: 100%;
+            }
+
+            .checkout-left {
+                padding: 35px;
+            }
+
+            .checkout-right {
+                padding: 35px 25px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <section id="order-form">
+    <div class="checkout-wrapper">
 
-        <h2>Customer Details</h2>
-        <p>Please fill in your details to proceed with your order.</p>
+        <div class="checkout-left">
 
-        <form id="customerForm">
+            <h1>Cekelet Teh.</h1>
 
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname"
-                    name="fullname"
-                    placeholder="Enter your full name"
-                    required>
-            </div>
+            <div class="chocolate-line"></div>
 
-            <div class="form-group">
-                <label for="address">Delivery Address</label>
-                <textarea id="address"
-                    name="address"
-                    placeholder="Enter your complete address"
-                    required></textarea>
-            </div>
+            <h3>Sweet Moments Start Here.</h3>
 
-            <div class="form-group">
-                <label for="contact">Contact Number</label>
-                <input type="tel" id="contact"
-                    name="contact"
-                    placeholder="e.g. 0123456789"
-                    required>
-            </div>
+            <p>
+                Thank you for choosing Cekelet Teh!
+                We are excited to prepare your favourite
+                chocolate treats. Please provide your
+                details to complete your order.
+            </p>
 
-            <button type="submit" class="proceed-button">
-                Proceed to Payment
-            </button>
+        </div>
 
-        </form>
+        <div class="checkout-right">
 
-        <a href="shop.html" class="back-link">
-            ← Back to Shop
-        </a>
+            <h2>Customer Details</h2>
 
-    </section>
+            <p class="subtitle">
+                Please enter your information below.
+            </p>
+
+            <form id="customerForm">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+
+                    <input type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+
+                    <input type="tel"
+                        id="contact"
+                        name="contact"
+                        placeholder="e.g. 0123456789"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter your complete delivery address"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="proceed-button">
+                    Proceed to Payment →
+                </button>
+
+            </form>
+
+            <a href="shop.html" class="back-link">
+                ← Back to Shop
+            </a>
+
+        </div>
+
+    </div>
 
     <script>
         document.getElementById("customerForm")
@@ -162,28 +272,10 @@
             localStorage.setItem("customerAddress", address);
             localStorage.setItem("customerContact", contact);
 
-            alert("Customer details saved successfully!");
+            window.location.href = "success.html";
 
         });
     </script>
-    <script>
-    document.getElementById("customerForm")
-    .addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-        const fullname = document.getElementById("fullname").value;
-        const address = document.getElementById("address").value;
-        const contact = document.getElementById("contact").value;
-
-        localStorage.setItem("customerName", fullname);
-        localStorage.setItem("customerAddress", address);
-        localStorage.setItem("customerContact", contact);
-
-        window.location.href = "success.html";
-
-    });
-</script>
 
 </body>
 </html>
