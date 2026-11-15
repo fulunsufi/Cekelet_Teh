@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chocolate Shop</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="chocshopstyle.css">
+</head>
+<body>
+<audio controls id="bgMusic" autoplay loop>
+    <source src="audio/bgmusic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function() {
+    music.play();
+}, { once: true });
+</script>
+    <section id="header">
+        <a href="Index.html"><img src="img/logo.png" class ="logo" alt="Cekelet Teh"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="Index.html"> Home </a></li>
+                <li><a href="shop.html"> Shop </a></li>
+                <li><a href="about.html"> About </a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+         </div>
+    </section>
+    <section id="hero">
+        <h1 class="namabrand">Cekelet Teh</h1>
+        <h2>Hi! Welcome to Cekelet Teh Shop!</h2>
+        <h3>A Little sweetness, A Lotsa Lurve.</h3>
+        <p class="walao">Discover your favourite chocolate treats, made to sweeten every moment. Indulge in delicious flavours and make every bite a little more special.</p><br>
+        <div class="promo">
+        <p class="animationpromo">Special Offer for November! 
+        Special Love Box of Chocolate is now here!
+        <span class="aurora">
+            <span class="aurora__item"></span>
+            <span class="aurora__item"></span>
+            <span class="aurora__item"></span>
+            <span class="aurora__item"></span>
+        </span></p>
+        </div>
+        <a href="shop.html">
+        <button>Catalog</button>
+        </a>
+
+    </section>
+    <section id="tajuk">
+        <div><h2>Featured Chocolates</h2></div>
+    </section>
+    <section id="feature" class="section-p1">
+        
+        <div class="fe-box">
+        <img src="img/kunafa.jpeg" alt="">
+        <h6>Dubai Kunafa Chocolate</h6>
+        </div>
+        <div class="fe-box">
+        <img src="img/classic.jpeg" alt="">
+        <h6>Classic Chocolate</h6>
+        </div>
+        <div class="fe-box">
+        <img src="img/strawberry.jpeg" alt="">
+        <h6>Strawberry Milk White Chocolate</h6>
+        </div>
+        <div class="fe-box">
+        <img src="img/darkalmond.jpeg" alt="">
+        <h6>Dark Almond Chocolate</h6>
+        </div>
+        <div class="fe-box">
+        <img src="img/special choc.webp" alt="">
+        <h6>Special Love Box of Chocolate</h6>
+        </div>
+
+    </section>
+
+    <section id="price-list">
+    <h2>Cekelet Teh Catalogue & Price List</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Chocolate Name</th>
+                <th>Price (RM)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dubai Kunafa Chocolate</td>
+                <td>25.00</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Classic Chocolate</td>
+                <td>18.00</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Strawberry Milk White Chocolate</td>
+                <td>23.00</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Dark Almond Chocolate</td>
+                <td>20.00</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Special Love Box of Chocolate</td>
+                <td>50.00</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+ 
+
+    <script src="script.js"></script>
+</body>
+</html>
