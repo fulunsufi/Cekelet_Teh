@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chocolate Shop</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="chocshopstyle.css">
+</head>
+<body>
+<audio controls id="bgMusic" autoplay loop>
+    <source src="audio/bgmusic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function() {
+    music.play();
+}, { once: true });
+</script>
+    <section id="header">
+       <a href="index.html"><img src="img/logo.png" class ="logo" alt="Cekelet Teh"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="shop.html"> Shop </a></li>
+                <li><a class="active" href="about.html"> About </a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2 style="color: #E8CDB5; font-style: italic; 
+        text-align: center; align-self: center;">
+            Know Me the Developer of this Website</h2>
+    </section>
+    <section id="about-head" class="section-p1">
+    <img src="img/about/aku.jpg" alt=""> 
+    <div>
+    <h2 style="color: antiquewhite; border: 1px solid; display: inline-block;
+    background-color: rgb(192, 87, 11); margin-left: 18px;
+    border-radius: 10px; padding: 3px;">Who Am I?</h2>
+    <p style="color: blanchedalmond; border: 2px solid; background-color:rgb(165, 74, 9) ;
+    font-family: 'Cormorant Garamond', sans-serif serif;
+    margin: 20px; padding: 2px;
+    font-size: 20px;">
+        The Developer: Mohamad Alfateh <br>
+
+        At Cekelet Teh, we offer a delightful variety of chocolates, from rich and classic flavours to unique and exciting creations. Every chocolate is made to bring a little sweetness and happiness to your day.
+        But that's not all! We are always looking forward to introducing more delicious chocolate varieties and exploring new flavours in the future. So, stay tuned for more sweet surprises and exciting creations.
+        There's always something new to look forward to at Cekelet Teh. Don't get bored of us just yet! Thank you for being part of our sweet journey. 🍫
+    </p>
+    <br>
+    <marquee bgcolor="#E8CDB5" loop="-1" scrollamount="5" width="100%" >
+    This website is for assignment purpose only. No copyright intended by the owner</marquee>
+    </div>
+    </section>
+
+    <section id="video" class="section-p1">
+
+    <h2>HOW IT'S MADE</h2>
+    <p>Discover the art of making delicious chocolates</p>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/DISjdfkSjc8"
+            title="How It's Made"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</section>
